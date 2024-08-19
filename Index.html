@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Special Birthday Wishes</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f2f2f2;
+		}
+		.confetti {
+			display: none;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-image: url('(link unavailable)');
+			background-size: cover;
+		}
+		.button {
+			padding: 5px 10px;
+			font-size: 18px;
+			color: #fff;
+			border: none;
+			border-radius: 10px;
+			cursor: pointer;
+		}
+		#taha-button {
+			background-color: #ff69b4;
+		}
+		#fasiha-button {
+			background-color: #33cc33;
+			display: none;
+		}
+		#only-fasiha-button {
+			background-color: #66cccc;
+			display: none;
+			position: fixed;
+			bottom: 0;
+			right: 0;
+		}
+		.response {
+			font-size: 36px;
+			font-weight: bold;
+			color: #333;
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<button id="taha-button" class="button">Click if you are Taha</button>
+	<div id="confetti" class="confetti"></div>
+	<div id="taha-wish" class="response">Happy Birthday Taha!</div>
+	
+	<button id="fasiha-button" class="button">Click if you are Fasiha</button>
+	<div id="fasiha-response" class="response">You aren't Fasiha, why did you click it hmm?</div>
+	
+	<button id="only-fasiha-button" class="button">Click if you are only only onlyyyy Fasiha</button>
+	<div id="only-fasiha-response" class="response">You nosy person, anyways wishing you theee happiest birthday and a year full of money and achievements!</div>
+	
+	<script>
+		document.getElementById("taha-button").addEventListener("click", function() {
+			document.getElementById("confetti").style.display = "block";
+			document.getElementById("taha-wish").style.display = "block";
+			document.getElementById("fasiha-button").style.display = "block";
+			setTimeout(function() {
+				document.getElementById("confetti").style.display = "none";
+			}, 3000);
+		});
+		
+		document.getElementById("fasiha-button").addEventListener("click", function() {
+			document.getElementById("fasiha-response").style.display = "block";
+			document.getElementById("only-fasiha-button").style.display = "block";
+		});
+		
+		document.getElementById("only-fasiha-button").addEventListener("click", function() {
+			document.getElementById("only-fasiha-response").style.display = "block";
+		});
+	</script>
+</body>
+</html>
